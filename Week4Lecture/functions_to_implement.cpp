@@ -43,12 +43,12 @@ int Sum(std::vector<int> nums)
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums)
 {
-	int sum = 0;
+	int prd = 1;
 	for (auto const &val : nums) 
 	{
-		sum *= val;
+		prd *= val;
 	}
-	return sum;
+	return prd;
 }
 
 // Adds an integer n to each element of a given vector
