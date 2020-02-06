@@ -75,7 +75,7 @@ std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 
 // returns a vector with true for numbers less than the second parameters and false for those greater than or equal to
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
-
+//this is a comment
 // Sums all numbers in a vector and returns the resulting value
 double Sum(std::vector<double> nums);
 
