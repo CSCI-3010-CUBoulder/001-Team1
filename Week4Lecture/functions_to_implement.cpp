@@ -1,3 +1,5 @@
+#include <vector>
+#include <string>
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -29,10 +31,22 @@ int RemoveTwos(int original){ // Tanner
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 
 // returns a vector with true for even numbers and false for odd numbers
-std::vector<bool> EvenMask(std::vector<int>);
+std::vector<bool> EvenMask(std::vector<int> v){
+  std::vector<bool> b;
+  for(int i = 0; i< v.size(); i++){
+    b.push_back(v[i] % 2 == 0);
+  }
+  return b;
+}
 
 // returns a vector with true for odd numbers and false for even numbers
-std::vector<bool> OddMask(std::vector<int>);
+std::vector<bool> OddMask(std::vector<int> v){
+  std::vector<bool> b;
+  for(int i = 0; i< v.size(); i++){
+    b.push_back(v[i] % 2 == 1);
+  }
+  return b;
+}
 
 // Sums all numbers in a vector and returns the resulting value
 int Sum(std::vector<int> nums)
