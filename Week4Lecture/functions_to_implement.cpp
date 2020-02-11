@@ -1,7 +1,6 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -41,22 +40,44 @@ int RemoveTwos(int original){ // Tanner
 std::vector<int> MultiplesFilter(std::vector<int>, int divides_by);
 
 // returns a vector with true for even numbers and false for odd numbers
-std::vector<bool> EvenMask(std::vector<int>);
+std::vector<bool> EvenMask(std::vector<int> v){
+  std::vector<bool> b;
+  for(int i = 0; i< v.size(); i++){
+    b.push_back(v[i] % 2 == 0);
+  }
+  return b;
+}
 
 // returns a vector with true for odd numbers and false for even numbers
-std::vector<bool> OddMask(std::vector<int>);
+std::vector<bool> OddMask(std::vector<int> v){
+  std::vector<bool> b;
+  for(int i = 0; i< v.size(); i++){
+    b.push_back(v[i] % 2 == 1);
+  }
+  return b;
+}
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums){ // Tanner
-    int sum = 0;
-    for(int i = 0; i < nums.size(); i++){
-        sum += nums[i];
-    }
-    return sum;
+int Sum(std::vector<int> nums)
+{
+	int sum = 0;
+	for (auto const &val : nums) 
+	{
+		sum += val;
+	}
+	return sum;
 }
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums)
+{
+	int prd = 1;
+	for (auto const &val : nums) 
+	{
+		prd *= val;
+	}
+	return prd;
+}
 
 // Adds an integer n to each element of a given vector
 std::vector<int> VectorPlusN(std::vector<int> v, int n);
@@ -133,4 +154,9 @@ std::vector<std::string> AddN(std::vector<std::string>, std::string n);
 std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
-std::vector<double> SubtractN(std::vector<double>, double n);
+std::vector<double> SubtractN(std::vector<double> vec, double n){
+  for (int i = 0; i< vec.size(); i++){
+    vec[i] -= n;
+  }
+  return vec;
+}
