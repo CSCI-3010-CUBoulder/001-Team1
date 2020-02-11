@@ -8,7 +8,7 @@
 
 //Sum
 TEST_CASE( "List Sums are computed", "[Sum]" ) {
-	vector<int> arr;
+	std::vector<int> arr;
 	REQUIRE(Sum(arr) == 0);
 	arr.push_back(0);
 	REQUIRE(Sum(arr) == 0);
@@ -21,7 +21,7 @@ TEST_CASE( "List Sums are computed", "[Sum]" ) {
 
 //Product
 TEST_CASE( "List Products are computed", "[Product]" ) {
-	vector<int> arr;
+	std::vector<int> arr;
 	REQUIRE(Product(arr) == 1);
 	arr.push_back(1);
 	REQUIRE(Product(arr) == 1);
