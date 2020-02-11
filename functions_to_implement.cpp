@@ -17,7 +17,7 @@ std::string Join(std::vector<std::string> pieces, std::string glue);
 
 // takes two vectors of integers, a and b. The function then removes elements from a if they are also in b.
 // If the integer is in b, but not in a, nothing happens.
-std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b){
+std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b){ // Tanner
     for(std::size_t i = 0; i < a.size(); i++){
         for(std::size_t j = 0; j < b.size(); j++){
             if(a[i] == b[j]){
@@ -25,6 +25,7 @@ std::vector<int> MatchVectors(std::vector<int> a, std::vector<int> b){
             }
         }
     }
+    return a;
 }
 
 // divides an input integer by 2 until it is impossible to do so, then returns the final number.
